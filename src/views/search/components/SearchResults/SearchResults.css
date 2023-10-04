@@ -1,0 +1,10 @@
+.searchResults{
+    width: 80%;
+    margin-top: 20px;
+}
+
+.searchResults-show{
+    background: #c7f9cc;
+    padding: 6px 60px;
+    margin-bottom: 20px;
+}
