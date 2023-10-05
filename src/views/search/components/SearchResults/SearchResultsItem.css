@@ -1,0 +1,8 @@
+.searchResults-show{
+    display: flex;
+}
+
+.searchResults-items{
+    color: #15616d;
+    margin-right: 20px;
+}

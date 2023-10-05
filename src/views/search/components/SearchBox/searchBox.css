@@ -7,5 +7,52 @@
 
 .search-box-buttons{
     display: flex;
-    flex-direction: row;
+    flex-direction: row;;
+}
+
+.search-box-title{
+    color: #d9dcd6;  
+}
+
+.search-box-input{
+    padding: 2px;
+    width: 200px;
+}
+
+button{
+    display: inline-block;
+    margin-left: 5px;
+    padding: 2px 17px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #d9dcd6;
+    background-color: #0e9594;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+}
+
+button:hover{    
+    background-color: #d9dcd6;
+    color: #0e9594;
+    border: 2px solid #0e9594;
+    box-shadow: 5px 5px 0px #0e9594;
+}
+
+button:active{
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(10px);
+}
+
+button:disabled{
+    background: #adb5bd;
+    box-shadow: none;
+    box-shadow: none;
+    transform: translateY(0);
+    color: #0e9594;
+    border: 1px solid #000;
 }
