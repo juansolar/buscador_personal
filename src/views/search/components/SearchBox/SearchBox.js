@@ -7,21 +7,17 @@ const SearchBox = ({onSearch, onClose, isAtTop}) => {
 
     const [search, setSearch] = useState("")
 
-    // const [ele, setEle] = useState("")
-
     const handleOnClickClose = () =>{
         setSearch("");
         onClose();
     }
 
-    // useEffect( () =>{
-    //     setEle(search);
-    //     onSearch();
-    //     if(search.length == 0){
-    //         onClose();
-    //     }
-
-    // }, [search]);
+    useEffect( () =>{
+        onSearch(search);
+        if(search.length == 0){
+            return onClose();
+        }
+    }, [search]);
 
     return (
         <div className='search-box'>

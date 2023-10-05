@@ -8,7 +8,7 @@ const SearchResults = ({results,isSearching}) => {
 
   return (
     <div className='searchResults'>
-        {!results.length && isSearching && <p>No existen resultados</p> }
+        {!results.length && isSearching && <p className='search-box-title'>No existen resultados</p> }
 
         {results?.map( (value) =>{
           return <SearchResultsItem 
