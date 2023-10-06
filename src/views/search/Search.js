@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import SearchBox from './components/SearchBox/SearchBox';
 import "./style.css";
-import data from '../../data/users.json';
+// import data from '../../data/users.json';
 import SearchResults from './components/SearchResults/SearchResults';
 
 const Search = () => {
 
   const [isAtTop, setIsAtTop] = useState(false);
-  const [results, setResults] = useState([])
+  const [results, setResults] = useState([]);
+  const [data, setData] = useState([]);
+
+  useEffect( () =>{
+    const getUsers = async () =>{
+      fetch('https://jsonplaceholder.typicode.com/users')
+        .then( response => response.json() )
+        .then( users => setData(users))
+    };
+    getUsers().catch(null);
+  },[] );
 
   const handleCloseClick = () => {
     setIsAtTop(false);
