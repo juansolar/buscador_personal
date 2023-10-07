@@ -1,0 +1,18 @@
+Para despliegue en netlify:
+    npm install --save-dev @babel/plugin-proposal-private-property-in-object
+    /*use --save-dev para instalarlo en devDependencies*/
+
+    npm i cross-env
+    /*modificar la siguiente linea en package.json:*/
+
+    "build": "cross-env CI=false react-scripts build"
+
+Para instalar Axios
+
+npm i axios
+
+
+UseEffect para busqueda por letra escrita.
+Codicionales en jsx
+filtros por json
+logica de renderizado (según el evento posicionar elementos en el DOM)

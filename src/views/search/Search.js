@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import SearchBox from './components/SearchBox/SearchBox';
 import "./style.css";
@@ -11,14 +12,15 @@ const Search = () => {
   const [results, setResults] = useState([]);
   const [data, setData] = useState([]);
 
-  useEffect( () =>{
+  useEffect(() =>{
     const getUsers = async () =>{
-      fetch('https://jsonplaceholder.typicode.com/users')
-        .then( response => response.json() )
-        .then( users => setData(users))
+      try {
+        const {data} = await axios.get('https://jsonplaceholder.typicode.com/users');
+        setData(data);        
+      } catch (error) { console.log(error) }
     };
-    getUsers().catch(null);
-  },[] );
+    getUsers();
+  },[])
 
   const handleCloseClick = () => {
     setIsAtTop(false);
